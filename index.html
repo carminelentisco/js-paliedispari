@@ -4,9 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <!-- <script src="JS/palindroma.js"></script> -->
+
+    <div class="container">
+        
+        <!-- Titolo -->
+        <header class="margin_topBottom_20 background_white">
+            <h1 class="title_header padding_topBottom_20">PaliDispari</h1>
+        </header>
+
+        <!-- Section Palindroma -->
+        <section>
+            <div class="box_container margin_topBottom_20 padding_topBottom_20 background_white">
+                <div class="box">
+                    <h2>Input</h2>
+                    <div class="margin_topBottom_20">
+                        <label>Parola :</label>
+                        <input type="text" id="parola-utente">
+                        <button id="button-invia-parola">Invia</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <h2>Output</h2>
+                    <div class="margin_topBottom_20">
+                        <span id="risultato" class="border_bottom_black"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Pari o Dispari -->
+        <section>
+            <div class="box_container margin_topBottom_20 padding_topBottom_20 background_white" >
+                <div class="box">
+                    <h2>Input</h2>
+                    <div class="margin_topBottom_20">
+                        
+                        <div class="margin_topBottom_20">
+                            <label> Inserisci Pari oppure Dispari </label>
+                            <input type="text" id="pari-dispari">
+                        </div>
+                        
+                        <div class="margin_topBottom_20">
+                            <label> Inserisci un numero da 1 a 5 :</label>
+                            <input type="number" id="numero">
+                        </div>
+
+                        <div>
+                            <button id="invia-pari-dispari">Invia</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box">
+                    <h2>Output</h2>
+                    <div class="margin_topBottom_20 dati-output">
+                        <span>Pari o dispari ? :<span id="inputText"></span></span>
+                        <span>Numero scelto :<span id="inputNumero"></span></span>
+                        <span>Numero random :<span id="outputRandom"></span></span>
+                        <span>Somma dei numeri:<span id="outputSomma"></span></span>
+                        <span>La somma è :<span id="outputSommaPariDispari"></span></span>
+                        <span id="risultato-pari-dispari"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="JS/palindroma.js"></script>
     <script src="JS/pari-dispari.js"></script>
 </body>
 </html>

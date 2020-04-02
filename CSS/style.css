@@ -1,0 +1,82 @@
+/* ---------- IMPORT ---------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Roboto:wght@700&display=swap');
+
+/* ---------- GENERAL RULE --------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+}
+
+.container {
+    width: 1600px;
+    margin: 0 auto;
+}
+
+/* ------ UTILITIES ------ */
+
+.padding_topBottom_20 {
+    padding: 20px 0;
+}
+
+.margin_topBottom_20 {
+    margin: 20px 0;
+}
+
+.background_white {
+    background-color: #FFF;
+}
+
+.border_bottom_black {
+    border-bottom: 3px solid #000 ;
+}
+
+/* ---------- PAGE ---------- */
+
+.box_container {
+    display: flex;
+}
+
+.box {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+
+/* ------ HEADER ------ */
+
+.title_header {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* ------ SECTION PALINDROMA ------ */
+
+
+.box input {
+    border: none;
+    border-bottom: 2px solid gray;
+}
+
+.box button {
+    padding: 5px;
+    border: none;
+    color: grey;
+}
+
+/* ------ SECTION PARI DISPARI  */
+
+.dati-output {
+    display: flex;
+    flex-direction: column;
+}

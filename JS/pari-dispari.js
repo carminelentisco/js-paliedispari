@@ -9,45 +9,49 @@
  *
 \**************************************************************************************/
 
-// Scelte dell' utente
-var selectPariDispari = prompt('Inserisci Pari o Dispari : ');
-var selectNumber = parseInt( prompt('Inserisci un numero da 1 a 5 : '));
-console.log('Selezione Pari / Dispari : ' + selectPariDispari);
-console.log('Selezione numero utente : ' + selectNumber);
+// Prendo il click bottone
+var buttonPariDispari = document.getElementById('invia-pari-dispari');
 
-// Numero Random AI
-var randomNuberComputer = randomAiNumber();
-console.log('Numero Random AI : ' + randomNuberComputer);
+buttonPariDispari.addEventListener('click', 
+    function() {
+        
+        // Prendo gli input
+        var selectPariDispari = document.getElementById('pari-dispari').value;
+        var selectNumber = document.getElementById('numero').value;
+        var randomNuberComputer = randomAiNumber();
+        var somma = selectNumber + randomNuberComputer;
+        var checkPariDispari = pariDispari(somma);
+        
 
-// Somma Dei numeri 
-var somma = selectNumber + randomNuberComputer;
-console.log('Somma dei numeri : ' + somma);
+        document.getElementById('inputText').innerHTML = selectPariDispari;
+        document.getElementById('inputNumero').innerHTML = selectNumber;
+        document.getElementById('outputRandom').innerHTML = randomNuberComputer;
+        document.getElementById('outputSomma').innerHTML = somma;
+        document.getElementById('outputSommaPariDispari').innerHTML = checkPariDispari;
+        
+        var risultato = document.getElementById('risultato-pari-dispari');
 
-// Pari o Dispari 
-var checkPariDispari = pariDispari(somma);
-console.log('Il Numero sommato è : ' + checkPariDispari);
+        if (selectPariDispari == checkPariDispari) {
+            risultato.innerHTML = "Hai Vinto";
+        } else {
+            risultato.innerHTML = "Hai Perso";
+        }
 
-//Risultato finale
+        // Generatore di numeri random
+        function randomAiNumber () {
+            var random = Math.floor( Math.random() * 5) + 1;
+            return random;
+        }
 
-if (selectPariDispari == checkPariDispari) {
-    console.log('Hai Vinto');
-} else {
-    console.log('Hai Perso');
-    
-}
-
-////////// FUNZIONI \\\\\\\\\\
-
-// Generatore di numeri random
-function randomAiNumber () {
-    var random = Math.floor( Math.random() * 5) + 1;
-    return random;
-}
-
-// Check Pari-Dispari 
-function pariDispari(numero) {
-    if (numero % 2 == 0) {
-        return 'pari';
+        // Check Pari-Dispari 
+        function pariDispari(numero) {
+            if (numero % 2 == 0) {
+                return 'pari';
+            }
+            return 'dispari';
+        }
     }
-    return 'dispari';
-}
+);
+
+
+
