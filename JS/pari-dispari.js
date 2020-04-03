@@ -17,15 +17,15 @@ buttonPariDispari.addEventListener('click',
         
         // Prendo gli input
         var selectPariDispari = document.getElementById('pari-dispari').value;
-        var selectNumber = document.getElementById('numero').value;
-        var randomNuberComputer = randomAiNumber();
-        var somma = selectNumber + randomNuberComputer;
+        var selectNumber = parseInt(document.getElementById('numero').value);
+        var randomNumberComputer = randomAiNumber();
+        var somma = selectNumber + parseInt(randomNumberComputer);
         var checkPariDispari = pariDispari(somma);
         
 
         document.getElementById('inputText').innerHTML = selectPariDispari;
         document.getElementById('inputNumero').innerHTML = selectNumber;
-        document.getElementById('outputRandom').innerHTML = randomNuberComputer;
+        document.getElementById('outputRandom').innerHTML = randomNumberComputer;
         document.getElementById('outputSomma').innerHTML = somma;
         document.getElementById('outputSommaPariDispari').innerHTML = checkPariDispari;
         
