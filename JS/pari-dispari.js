@@ -74,10 +74,14 @@ buttonPariDispari.addEventListener('click',
         // Conversione parola in minuscolo + correzione degli spazi
         selectPariDispari = selectPariDispari.trim().toLowerCase();
 
-        // Controllo range numeri inseriti
+        // Controllo range numeri inseriti 
         
-        if (selectNumber > 5 ){
-            alert('Errore');
+        if ( (selectPariDispari !== 'pari' || selectPariDispari == 'dispari' ) && ( ( selectNumber < 1 || selectNumber > 5 ) || isNaN(selectNumber) ) ) {
+            
+            selectPariDispari = selectPariDispari.value = "";
+            selectNumber = selectNumber.value = "";
+            alert('Erroe. Correggi i dati inseriti. ')
+
         } else {
             
             // Scrittura in HTML
@@ -95,8 +99,10 @@ buttonPariDispari.addEventListener('click',
             } else {
                 risultato.innerHTML = "Hai Perso";
             }
-        }
 
+        } 
+
+        
         
 
         // Generatore di numeri random
